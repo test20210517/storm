@@ -1,1 +1,29 @@
-{"name":"storm","author":"test20210517","schemaVersion":1,"entry":"main.view.panopticon"}
+{"name":"storm","author":"test20210517","schemaVersion":1,
+
+"entry":"main.view.panopticon",
+ "presets": [
+    {
+      "type": "Embed",
+      "name": "ADS-B Exchange",
+      "parameters": {
+        "title": "Flight Tracker",
+        "src": "https://globe.adsbexchange.com/?hideSidebar=true&icao={{icao}}"
+      },
+      "viewParameters": {
+        "icao": {
+          "label": "ICAO",
+          "placeholder": "e.g. A33666"
+        }
+      }
+    },
+    {
+      "type": "Embed",
+      "name": "MarineTraffic.com",
+      "parameters": {
+        "title": "MarineTraffic.com",
+        "src": "https://www.marinetraffic.com/{{#language}}{{language}}{{/language}}{{^language}}en{{/language}}/ais/embed/zoom:{{#mtzoom}}{{mtzoom}}{{/mtzoom}}{{^mtzoom}}3{{/mtzoom}}/centery:{{#mtlat}}{{mtlat}}{{/mtlat}}{{^mtlat}}36{{/mtlat}}/centerx:{{#mtlon}}{{mtlon}}{{/mtlon}}{{^mtlon}}23{{/mtlon}}/maptype:{{#mtmaptype}}{{mtmaptype}}{{/mtmaptype}}{{^mtmaptype}}0{{/mtmaptype}}/shownames:{{#mtshownames}}true{{/mtshownames}}{{^mtshownames}}false{{/mtshownames}}/mmsi:{{#mmsi}}{{mmsi}}{{/mmsi}}{{^mmsi}}0{{/mmsi}}/shipid:{{#shipid}}{{shipid}}{{/shipid}}{{^shipid}}0{{/shipid}}/fleet:{{#mtfleet}}{{mtfleet}}{{/mtfleet}}/fleet_id:{{#mtfleetid}}{{mtfleetid}}{{/mtfleetid}}/vtypes:{{#mtvtypes}}{{mtvtypes}}{{/mtvtypes}}/showmenu:{{#mtshowmenu}}{{mtshowmenu}}{{/mtshowmenu}}/remember:{{#mtremember}}true{{/mtremember}}{{^mtremember}}false{{/mtremember}}"
+      }
+    }
+  ]
+
+}
